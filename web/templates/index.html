@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {% load static %}
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
   <title>File-save</title>
 </head>
 <body>
   <h1> Archivos a guardar</h1>
-  <style> 
-    input {
-      width: 100%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      box-sizing: border-box;
-    };
-  </style>
 
-  <form action="" method="post">
+
+  <form action="" method="post" class="miformulario">
     {% csrf_token %}
     {{form.media}}
     {{ form.as_p }}
-   <input type="submit" value="">
+   <input type="submit" value="submit">
+   <canvas id="myCanvas" width="100" height="100" style="border:1px solid #000000;"/>
   </form>
+
+  
 </body>
 </html>
