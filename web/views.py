@@ -6,12 +6,11 @@ from django.http import HttpResponse
 def index(request):
   form = document()
   if request.method == 'POST':
-    print(request.FILES)
     form = document(request.POST, request.FILES) 
     if form.is_valid():
       form.save()
       return HttpResponse('sucess')
     else:
-      
+      print(form.errors)
       return HttpResponse('error')
   return render(request, 'index.html', {'form':form})
