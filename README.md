@@ -5,7 +5,7 @@ Este proyecto Django permite la subida y almacenamiento de múltiples archivos u
 ## Requisitos
 
 - Python 3.x
-- Django 3.x o superior
+- Django 4.x o superior
 
 ## Instalación
 
