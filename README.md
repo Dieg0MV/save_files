@@ -10,6 +10,13 @@ Este proyecto Django permite la subida y almacenamiento de múltiples archivos u
 ## Instalación
 
 1. Clona este repositorio:
-    git clone https://github.com/Dieg0MV/save_files.git
-    cd save_files
+
+- git clone https://github.com/Dieg0MV/save_files.git
+- cd save_files
+
+
     
+2. Configura la base de datos y aplica las migraciones:
+
+- python manage.py makemigrations
+- python manage.py migrate
