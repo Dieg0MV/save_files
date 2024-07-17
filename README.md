@@ -1,4 +1,4 @@
-# Proyecto Django para Subida de Múltiples Archivos
+# Almacena archivos multimedia en tu servidor o conéctalo a la nube
 
 Este proyecto Django permite la subida y almacenamiento de múltiples archivos utilizando formularios y modelos de Django.
 
