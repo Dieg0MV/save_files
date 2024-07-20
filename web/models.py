@@ -7,6 +7,6 @@ class firm(models.Model):
   Acta_files = models.FileField(max_length=100, upload_to="files/", null=False, blank=False)
   Comp_files = models.FileField(max_length=100, upload_to="files/", null=False, blank=False)
 
-  # Firma_files = models.FileField(max_length=100, default='default_files/placeholder.pdf')
+# Firma_files = models.FileField(max_length=100, default='default_files/placeholder.pdf')
   #def __str__():
     
