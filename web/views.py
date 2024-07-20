@@ -14,12 +14,12 @@ def index(request):
       print(form.errors)
       return HttpResponse('error')
   return render(request, 'index.html', {'form':form})
-<<<<<<< HEAD
-
-
 
 def Firm_Digital(request):
-  
+  if request.method == "POST":
+    data = document(request.POST)
+    if data.is_valid():
+      data.save()
+    
   return render(request, 'firm.html')
-=======
->>>>>>> 471ed4bb17540e80e96651f80a3d12c68bd1a1d5
+
