@@ -22,4 +22,3 @@ def Firm_Digital(request):
       data.save()
     
   return render(request, 'firm.html')
-
