@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .forms import document
-from django.http import HttpResponse
+import base64
+from django.views.decorators.csrf import csrf_exempt
+import json 
+from django.http import HttpResponse, JsonResponse
 # Create your views here.
 
 def index(request):
@@ -15,10 +18,16 @@ def index(request):
       return HttpResponse('error')
   return render(request, 'index.html', {'form':form})
 
+@csrf_exempt
 def Firm_Digital(request):
   if request.method == "POST":
-    data = document(request.POST)
-    if data.is_valid():
-      data.save()
+    date = json.loads(request.body)
+    image_data = date.get('image')
+    imgstr = image_data.split('data:image/png;base64,')
     
+    decode = base64.b64decode(imgstr)
+    
+    with ("imagen.png", "wb") as file:
+      file.write(decode)
+        
   return render(request, 'firm.html')
