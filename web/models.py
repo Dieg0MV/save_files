@@ -8,5 +8,7 @@ class firm(models.Model):
   Comp_files = models.FileField(max_length=100, upload_to="files/", null=False, blank=False)
  #Firma_files = models.FileField(max_length=100, upload_to="files/", null=True, blank=False)
 
-#def __str__():
+class test(models.Model):
+  Firma_files = models.FileField(max_length=100, upload_to="files/", null=True, blank=False)
+
     
